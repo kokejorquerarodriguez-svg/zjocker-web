@@ -125,7 +125,7 @@
 
   /* BIO */
   .bio{background:var(--black-soft);}
-  .bio-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center;}
+  .bio-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start;}
   .bio-photo{
     position:relative;border-radius:14px;overflow:hidden;
     box-shadow:0 30px 60px rgba(0,0,0,.5);
@@ -145,15 +145,17 @@
   }
   .iphone-frame img{display:block;width:100%;border-radius:24px;}
   .bio-photo2{
-    float:right;width:210px;margin:10px 0 24px 28px;border-radius:12px;overflow:hidden;
+    float:right;width:240px;margin:6px 0 20px 30px;border-radius:12px;overflow:hidden;
     border:1px solid rgba(255,255,255,.08);box-shadow:0 12px 30px rgba(0,0,0,.4);
+    aspect-ratio:4/5;
   }
-  .bio-photo2 img{display:block;width:100%;}
+  .bio-photo2 img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;}
   .bio-photo3{
-    float:left;clear:both;width:210px;margin:10px 28px 24px 0;border-radius:12px;overflow:hidden;
+    float:left;clear:both;width:240px;margin:6px 30px 20px 0;border-radius:12px;overflow:hidden;
     border:1px solid rgba(255,255,255,.08);box-shadow:0 12px 30px rgba(0,0,0,.4);
+    aspect-ratio:4/5;
   }
-  .bio-photo3 img{display:block;width:100%;}
+  .bio-photo3 img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;}
   @media (max-width:768px){
     .bio-photo3{
       float:none;width:100vw;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);
