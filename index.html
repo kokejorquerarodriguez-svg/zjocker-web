@@ -82,7 +82,7 @@
   }
   .hero::before{
     content:"";position:absolute;inset:0;
-    background-image:url('https://i.scdn.co/image/ab67616100005174ae52bf0d69ecd7ca3fda1054');
+    background-image:url('https://i.scdn.co/image/ab676161000051746820f085da043a80118cbea4');
     background-size:cover;background-position:center;
     opacity:.10;filter:blur(2px) grayscale(30%);
   }
@@ -113,6 +113,8 @@
   .btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 24px rgba(232,16,42,.35);}
   .btn-outline{border:1px solid rgba(255,255,255,.25);color:var(--text);}
   .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+  .btn-hero{border:1px solid rgba(255,255,255,.25);color:var(--text);background:transparent;}
+  .btn-hero:hover{border-color:var(--red);color:#fff;background:var(--red);box-shadow:0 8px 24px rgba(232,16,42,.35);}
 
   /* SECTION SHARED */
   section{padding:110px 0;}
@@ -336,23 +338,23 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-content">
-    <span class="hero-tag">Trap · Reggaetón · Chile</span>
+    <span class="hero-tag">Latin Artist · Chile</span>
     <h1>Z<span>JOCKER</span></h1>
-    <p class="lang-es">Desde las poblaciones a los charts urbanos de Chile. Música que suena a barrio, a plata y a calle.</p>
-    <p class="lang-en">From the neighborhoods to Chile's urban charts. Music that sounds like the streets, money and hustle.</p>
+    <p class="lang-es">Desde la población a los charts urbanos de Chile. Música de calle y pa las Babys.</p>
+    <p class="lang-en">From the block to Chile's urban charts. Street music made for the Babys.</p>
     <div class="hero-stats">
-      <!-- STAT:MONTHLY_LISTENERS:START --><div><strong>594K</strong><span class="lang-es">Oyentes mensuales</span><span class="lang-en">Monthly listeners</span></div><!-- STAT:MONTHLY_LISTENERS:END -->
-      <!-- STAT:YT_SUBS:START --><div><strong>163K</strong><span class="lang-es">Suscriptores YouTube</span><span class="lang-en">YouTube subscribers</span></div><!-- STAT:YT_SUBS:END -->
+      <!-- STAT:MONTHLY_LISTENERS:START --><div><strong>594K</strong><span class="lang-es">Oyentes mensuales en Spotify</span><span class="lang-en">Spotify monthly listeners</span></div><!-- STAT:MONTHLY_LISTENERS:END -->
+      <!-- STAT:YT_SUBS:START --><div><strong>163K</strong><span class="lang-es">Subs en YouTube</span><span class="lang-en">YouTube subs</span></div><!-- STAT:YT_SUBS:END -->
       <!-- STAT:TOTAL_VIEWS:START --><div><strong>193,566,533</strong><span class="lang-es">Vistas en YouTube</span><span class="lang-en">YouTube views</span></div><!-- STAT:TOTAL_VIEWS:END -->
     </div>
     <div class="btn-row">
-      <a class="btn btn-primary" href="https://open.spotify.com/artist/6IaOUkLKnYH0q8Vm2AdhQ5" target="_blank" rel="noopener" onclick="return openSpotify(event,'artist','6IaOUkLKnYH0q8Vm2AdhQ5','https://open.spotify.com/artist/6IaOUkLKnYH0q8Vm2AdhQ5')">
+      <a class="btn btn-hero" href="https://open.spotify.com/artist/6IaOUkLKnYH0q8Vm2AdhQ5" target="_blank" rel="noopener" onclick="return openSpotify(event,'artist','6IaOUkLKnYH0q8Vm2AdhQ5','https://open.spotify.com/artist/6IaOUkLKnYH0q8Vm2AdhQ5')">
         <span class="lang-es">Escuchar en Spotify</span><span class="lang-en">Listen on Spotify</span>
       </a>
-      <a class="btn btn-outline" href="https://youtube.com/@zjockeroficial" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://youtube.com/@zjockeroficial')">
+      <a class="btn btn-hero" href="https://youtube.com/@zjockeroficial" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://youtube.com/@zjockeroficial')">
         <span class="lang-es">Ver en YouTube</span><span class="lang-en">Watch on YouTube</span>
       </a>
-      <a class="btn btn-outline" href="#booking">Booking</a>
+      <a class="btn btn-hero" href="#booking">Booking</a>
     </div>
   </div>
 </header>

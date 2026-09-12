@@ -102,11 +102,11 @@ def main():
         html = f.read()
 
     if 'monthly_listeners' in data:
-        new_div = build_stat_div(data['monthly_listeners'], 'Oyentes mensuales', 'Monthly listeners')
+        new_div = build_stat_div(data['monthly_listeners'], 'Oyentes mensuales en Spotify', 'Spotify monthly listeners')
         html = replace_marked(html, 'STAT:MONTHLY_LISTENERS', new_div)
 
     if 'youtube_subs' in data:
-        new_div = build_stat_div(data['youtube_subs'], 'Suscriptores YouTube', 'YouTube subscribers')
+        new_div = build_stat_div(data['youtube_subs'], 'Subs en YouTube', 'YouTube subs')
         html = replace_marked(html, 'STAT:YT_SUBS', new_div)
 
     if 'video_count' in data:
