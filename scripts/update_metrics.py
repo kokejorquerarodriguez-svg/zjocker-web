@@ -13,7 +13,7 @@ no viene, ese bloque no se toca):
   "monthly_listeners": "600K",
   "youtube_subs": "164K",
   "video_count": "70",
-  "total_views": "194M+",
+  "total_views": "193,566,533",
   "latest": [
     {"id": "xxxxxxxxxxx", "alt": "Titulo corto", "title": "Titulo completo (Video Oficial)",
      "time_es": "Hace 3 dias", "time_en": "3 days ago", "views": "10K"},
