@@ -17,7 +17,9 @@ no viene, ese bloque no se toca):
   "latest": [
     {"id": "xxxxxxxxxxx", "alt": "Titulo corto", "title": "Titulo completo (Video Oficial)",
      "time_es": "Hace 3 dias", "time_en": "3 days ago", "views": "10K"},
-    ... (hasta 3 items, en orden cronologico del mas nuevo al mas viejo)
+    ... (hasta 5 items, en orden cronologico del mas nuevo al mas viejo. El primero
+    (el lanzamiento mas reciente) se dibuja en una caja destacada mas grande; los
+    siguientes 4 se dibujan en una grilla normal mas chica.)
   ],
   "top10": [
     {"id": "xxxxxxxxxxx", "alt": "Titulo corto", "title": "Titulo completo",
@@ -47,9 +49,10 @@ def replace_marked(html, tag, new_inner):
     return html[:si] + start + new_inner + end + html[ei_full:]
 
 
-def build_latest_card(item):
+def build_latest_card(item, featured=False):
+    cls = 'yt-card yt-card-featured' if featured else 'yt-card'
     return (
-        f'<a class="yt-card" href="https://www.youtube.com/watch?v={item["id"]}" target="_blank" rel="noopener" '
+        f'<a class="{cls}" href="https://www.youtube.com/watch?v={item["id"]}" target="_blank" rel="noopener" '
         f'onclick="return openYouTube(event,\'https://www.youtube.com/watch?v={item["id"]}\')">\n'
         f'        <div class="yt-thumb"><span class="yt-date">NEW</span>'
         f'<img src="https://img.youtube.com/vi/{item["id"]}/hqdefault.jpg" alt="{item["alt"]}"></div>\n'
@@ -105,8 +108,12 @@ def main():
         html = replace_marked(html, 'STAT:TOTAL_VIEWS', new_div)
 
     if 'latest' in data and data['latest']:
-        cards = [build_latest_card(it) for it in data['latest'][:3]]
-        inner = '<div class="yt-grid latest-grid">\n      ' + '\n      '.join(cards) + '\n    </div>'
+        items = data['latest'][:5]
+        featured_html = build_latest_card(items[0], featured=True)
+        rest_cards = [build_latest_card(it) for it in items[1:5]]
+        inner = '<div class="latest-featured">\n      ' + featured_html + '\n    </div>\n'
+        if rest_cards:
+            inner += '    <div class="yt-grid latest-grid">\n      ' + '\n      '.join(rest_cards) + '\n    </div>'
         html = replace_marked(html, 'LATEST', inner)
 
     if 'top10' in data and data['top10']:
