@@ -24,7 +24,8 @@ no viene, ese bloque no se toca):
   "top10": [
     {"id": "xxxxxxxxxxx", "alt": "Titulo corto", "title": "Titulo completo",
      "time_es": "3 anios", "time_en": "3 years", "views": "19M", "rank": 1},
-    ... (hasta 10 items, ordenados por vistas de mayor a menor)
+    ... (hasta 6 items -Top 6-, ordenados por vistas de mayor a menor. Se dibujan
+    en cajas mas chicas que las demas secciones.)
   ]
 }
 """
@@ -117,8 +118,8 @@ def main():
         html = replace_marked(html, 'LATEST', inner)
 
     if 'top10' in data and data['top10']:
-        cards = [build_top10_card(it) for it in data['top10'][:10]]
-        inner = '<div class="yt-grid">\n\n      ' + '\n\n      '.join(cards) + '\n\n    </div>'
+        cards = [build_top10_card(it) for it in data['top10'][:6]]
+        inner = '<div class="yt-grid top6-grid">\n\n      ' + '\n\n      '.join(cards) + '\n\n    </div>'
         html = replace_marked(html, 'TOP10', inner)
 
     with open(html_path, 'w', encoding='utf-8') as f:
