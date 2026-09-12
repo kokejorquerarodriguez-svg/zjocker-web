@@ -766,6 +766,15 @@
         <div class="ic">✉</div>
         <div><small class="lang-es">Producción ejecutiva</small><small class="lang-en">Executive production</small><strong>executive@zjocker.com</strong></div>
       </div>
+      <div class="booking-card" id="bookingPhone">
+        <div class="ic">☎</div>
+        <div><small class="lang-es">Teléfono/WhatsApp</small><small class="lang-en">Phone/WhatsApp</small><strong style="cursor:pointer;text-decoration:underline;">+56 9 9298 5411</strong>
+          <div class="phone-options" style="display:none;margin-top:8px;gap:8px;flex-direction:column;">
+            <a href="tel:+56992985411" style="padding:6px 12px;background:#007AFF;color:white;border-radius:6px;text-align:center;text-decoration:none;font-size:12px;"><span class="lang-es">Llamar</span><span class="lang-en">Call</span></a>
+            <a href="https://wa.me/56992985411" style="padding:6px 12px;background:#25D366;color:white;border-radius:6px;text-align:center;text-decoration:none;font-size:12px;"><span class="lang-es">WhatsApp</span><span class="lang-en">WhatsApp</span></a>
+          </div>
+        </div>
+      </div>
       <div class="booking-card">
         <div class="ic">📷</div>
         <div><small>Instagram</small><strong>@zjocker</strong></div>
@@ -847,6 +856,23 @@
       document.getElementById('panel-' + tab.getAttribute('data-panel')).classList.add('active');
     });
   });
+
+  // Phone booking options toggle
+  var phoneNum = document.querySelector('#bookingPhone strong');
+  var phoneOptions = document.querySelector('#bookingPhone .phone-options');
+  if(phoneNum && phoneOptions){
+    phoneNum.addEventListener('click', function(e){
+      e.stopPropagation();
+      if(phoneOptions.style.display === 'none'){
+        phoneOptions.style.display = 'flex';
+      } else {
+        phoneOptions.style.display = 'none';
+      }
+    });
+    document.addEventListener('click', function(){
+      phoneOptions.style.display = 'none';
+    });
+  }
 
   // Deep-link to native apps (Spotify / YouTube) with web fallback
   function openSpotify(evt, type, id, webUrl){
