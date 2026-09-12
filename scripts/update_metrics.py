@@ -52,11 +52,20 @@ def replace_marked(html, tag, new_inner):
 
 def build_latest_card(item, featured=False):
     cls = 'yt-card yt-card-featured' if featured else 'yt-card'
+    if featured:
+        # La caja destacada usa la miniatura de mayor resolucion que ofrece YouTube
+        # (1280x720). No todos los videos la tienen, asi que si falla se cae de
+        # vuelta a hqdefault (la misma calidad que usan las cajas chicas).
+        img_tag = (
+            f'<img src="https://img.youtube.com/vi/{item["id"]}/maxresdefault.jpg" alt="{item["alt"]}" '
+            f'onerror="this.onerror=null;this.src=\'https://img.youtube.com/vi/{item["id"]}/hqdefault.jpg\';">'
+        )
+    else:
+        img_tag = f'<img src="https://img.youtube.com/vi/{item["id"]}/hqdefault.jpg" alt="{item["alt"]}">'
     return (
         f'<a class="{cls}" href="https://www.youtube.com/watch?v={item["id"]}" target="_blank" rel="noopener" '
         f'onclick="return openYouTube(event,\'https://www.youtube.com/watch?v={item["id"]}\')">\n'
-        f'        <div class="yt-thumb"><span class="yt-date">NEW</span>'
-        f'<img src="https://img.youtube.com/vi/{item["id"]}/hqdefault.jpg" alt="{item["alt"]}"></div>\n'
+        f'        <div class="yt-thumb"><span class="yt-date">NEW</span>{img_tag}</div>\n'
         f'        <div class="yt-info"><h3>{item["title"]}</h3>\n'
         f'          <div class="yt-meta"><span><span class="lang-es">{item["time_es"]}</span>'
         f'<span class="lang-en">{item["time_en"]}</span></span>'
