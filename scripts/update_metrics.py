@@ -13,6 +13,7 @@ no viene, ese bloque no se toca):
   "monthly_listeners": "600K",
   "youtube_subs": "164K",
   "video_count": "70",
+  "total_views": "194M+",
   "latest": [
     {"id": "xxxxxxxxxxx", "alt": "Titulo corto", "title": "Titulo completo (Video Oficial)",
      "time_es": "Hace 3 dias", "time_en": "3 days ago", "views": "10K"},
@@ -98,6 +99,10 @@ def main():
     if 'video_count' in data:
         new_div = build_stat_div(data['video_count'], 'Videos oficiales', 'Official videos')
         html = replace_marked(html, 'STAT:VIDEO_COUNT', new_div)
+
+    if 'total_views' in data:
+        new_div = build_stat_div(data['total_views'], 'Vistas en YouTube', 'YouTube views')
+        html = replace_marked(html, 'STAT:TOTAL_VIEWS', new_div)
 
     if 'latest' in data and data['latest']:
         cards = [build_latest_card(it) for it in data['latest'][:3]]
