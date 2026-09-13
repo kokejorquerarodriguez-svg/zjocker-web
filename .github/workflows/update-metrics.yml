@@ -1,5 +1,4 @@
-name: Actualizar Metricas Z Jocker
-
+Update Z Jocker Metrics
 on:
   schedule:
       - cron: '0 13 * * *'
