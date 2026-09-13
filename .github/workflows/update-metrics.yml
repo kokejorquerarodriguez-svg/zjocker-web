@@ -1,11 +1,9 @@
 name: Update Z Jocker Metrics
-
 on:
   schedule:
       - cron: '0 13 * * *'
           - cron: '0 21 * * *'
             workflow_dispatch:
-
             jobs:
               update-metrics:
                   runs-on: ubuntu-latest
@@ -15,21 +13,14 @@ on:
                                           with:
                                                     python-version: '3.9'
                                                           - run: pip install requests python-dotenv
-                                                                - run: |
-                                                                          cd zjocker-automation
-                                                                                    cat > .env << ENVFILE
-                                                                                              YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}
-                                                                                                        SPOTIFY_API_KEY=${{ secrets.SPOTIFY_API_KEY }}
-                                                                                                                  ARTIST_ID=6IaOUkLKnYH0q8Vm2AdhQ5
-                                                                                                                            YOUTUBE_CHANNEL_ID=ZJOCKEROFICIAL
-                                                                                                                                      ENVFILE
-                                                                                                                                            - run: cp index.html zjocker-automation/
-                                                                                                                                                  - run: cd zjocker-automation && python3 scripts/fetch_metrics.py --youtube-only || true
-                                                                                                                                                        - run: cd zjocker-automation && python3 scripts/fetch_metrics.py --spotify-only || true
-                                                                                                                                                              - run: cd zjocker-automation && python3 scripts/update_metrics.py || true
-                                                                                                                                                                    - run: cp zjocker-automation/index.html .
-                                                                                                                                                                          - run: |
-                                                                                                                                                                                    git config --global user.email "zjocker-bot@github.com"
-                                                                                                                                                                                              git config --global user.name "Z Jocker Bot"
-                                                                                                                                                                                                        git add -A
-                                                                                                                                                                                                                  git diff --quiet && git diff --staged --quiet || (git commit -m "🎵 Actualizar métricas" && git push)
+                                                                - run: echo "YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}" > zjocker-automation/.env && echo "SPOTIFY_API_KEY=${{ secrets.SPOTIFY_API_KEY }}" >> zjocker-automation/.env && echo "ARTIST_ID=6IaOUkLKnYH0q8Vm2AdhQ5" >> zjocker-automation/.env && echo "YOUTUBE_CHANNEL_ID=ZJOCKEROFICIAL" >> zjocker-automation/.env
+                                                                      - run: cp index.html zjocker-automation/ || true
+                                                                            - run: cd zjocker-automation && python3 scripts/fetch_metrics.py --youtube-only || true
+                                                                                  - run: cd zjocker-automation && python3 scripts/fetch_metrics.py --spotify-only || true
+                                                                                        - run: cd zjocker-automation && python3 scripts/update_metrics.py || true
+                                                                                              - run: cp zjocker-automation/index.html . || true
+                                                                                                    - run: |
+                                                                                                              git config --global user.email "zjocker-bot@github.com"
+                                                                                                                        git config --global user.name "Z Jocker Bot"
+                                                                                                                                  git add -A
+                                                                                                                                            git diff --quiet && git diff --staged --quiet || (git commit -m "🎵 Actualizar métricas" && git push)
