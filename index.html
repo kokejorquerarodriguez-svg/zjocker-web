@@ -366,6 +366,17 @@
     .show-card{flex-wrap:wrap;}
     .show-badge{margin-left:86px;}
   }
+
+  /* LOLYTA FEST gallery */
+  .show-gallery{max-width:820px;margin:-8px auto 28px;}
+  .show-gallery summary{cursor:pointer;list-style:none;text-align:center;padding:10px 16px;border:1px solid rgba(255,255,255,.15);border-radius:999px;font-size:13px;letter-spacing:.5px;color:var(--text-dim);}
+  .show-gallery summary::-webkit-details-marker{display:none;}
+  .show-gallery summary:hover{color:#fff;border-color:var(--red);}
+  .show-gallery[open] summary{margin-bottom:16px;color:#fff;border-color:var(--red);}
+  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;}
+  .gallery-grid a{display:block;aspect-ratio:9/16;overflow:hidden;border-radius:8px;background:#111;}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+  .gallery-grid a:hover img{transform:scale(1.05);}
 </style>
 </head>
 <body>
@@ -569,32 +580,32 @@
       <h3><span class="lang-es">Últimos lanzamientos</span><span class="lang-en">Latest releases</span></h3>
     </div>
     <!-- LATEST:START --><div class="latest-featured">
-      <a class="yt-card yt-card-featured" href="https://www.youtube.com/watch?v=DMuyRpKdl0Q" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=DMuyRpKdl0Q')">
-        <div class="yt-thumb"><span class="yt-date">NEW</span><img src="https://img.youtube.com/vi/DMuyRpKdl0Q/maxresdefault.jpg" alt="Na de Amores" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/DMuyRpKdl0Q/hqdefault.jpg';"></div>
-        <div class="yt-info"><h3>Na de Amores (Video Oficial) [Prod by. Adan La Amenaza]</h3>
-          <div class="yt-meta"><span><span class="lang-es">Hace 2 semanas</span><span class="lang-en">2 weeks ago</span></span><b>60K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+      <a class="yt-card yt-card-featured" href="https://www.youtube.com/watch?v=NbI3ELBiu4A" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=NbI3ELBiu4A')">
+        <div class="yt-thumb"><span class="yt-date">NEW</span><img src="https://img.youtube.com/vi/NbI3ELBiu4A/maxresdefault.jpg" alt="Come y Vete" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/NbI3ELBiu4A/hqdefault.jpg';"></div>
+        <div class="yt-info"><h3>Come y Vete (Video Oficial)</h3>
+          <div class="yt-meta"><span><span class="lang-es">Hace 2 semanas</span><span class="lang-en">2 weeks ago</span></span><b>125K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
     </div>
     <div class="yt-grid latest-grid">
-      <a class="yt-card" href="https://www.youtube.com/watch?v=NbI3ELBiu4A" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=NbI3ELBiu4A')">
-        <div class="yt-thumb"><span class="yt-date">NEW</span><img src="https://img.youtube.com/vi/NbI3ELBiu4A/hqdefault.jpg" alt="Come y Vete"></div>
-        <div class="yt-info"><h3>Come y Vete (Video Oficial) ProdBy: Adan La Amenaza</h3>
-          <div class="yt-meta"><span><span class="lang-es">Hace 1 mes</span><span class="lang-en">1 month ago</span></span><b>188K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+      <a class="yt-card" href="https://www.youtube.com/watch?v=Ek0q6MkLqUI" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=Ek0q6MkLqUI')">
+        <div class="yt-thumb"><span class="yt-date">NEW</span><img src="https://img.youtube.com/vi/Ek0q6MkLqUI/hqdefault.jpg" alt="Juntemonos Otra Vez VideoLirycs"></div>
+        <div class="yt-info"><h3>Juntémonos Otra Vez (Ft. Bayriton) VideoLirycs</h3>
+          <div class="yt-meta"><span><span class="lang-es">Hace 1 mes</span><span class="lang-en">1 month ago</span></span><b>14K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
       <a class="yt-card" href="https://www.youtube.com/watch?v=f4x4uQF8s_w" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=f4x4uQF8s_w')">
         <div class="yt-thumb"><span class="yt-date">NEW</span><img src="https://img.youtube.com/vi/f4x4uQF8s_w/hqdefault.jpg" alt="Imbattuto"></div>
-        <div class="yt-info"><h3>Imbattuto (Ft. BastyGlock) [Video Oficial] | LOS REYES CON LOS REYES</h3>
-          <div class="yt-meta"><span><span class="lang-es">Hace 2 meses</span><span class="lang-en">2 months ago</span></span><b>40K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+        <div class="yt-info"><h3>Imbattuto (Ft. @BASTYGLOCK) | LOS REYES CON LOS REYES</h3>
+          <div class="yt-meta"><span><span class="lang-es">Hace 1 mes</span><span class="lang-en">1 month ago</span></span><b>30K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
       <a class="yt-card" href="https://www.youtube.com/watch?v=XkNAO7wZ9oQ" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=XkNAO7wZ9oQ')">
         <div class="yt-thumb"><span class="yt-date">NEW</span><img src="https://img.youtube.com/vi/XkNAO7wZ9oQ/hqdefault.jpg" alt="Mencho"></div>
         <div class="yt-info"><h3>Mencho (Video Oficial) | LOS REYES CON LOS REYES</h3>
-          <div class="yt-meta"><span><span class="lang-es">Hace 2 meses</span><span class="lang-en">2 months ago</span></span><b>161K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+          <div class="yt-meta"><span><span class="lang-es">Hace 1 mes</span><span class="lang-en">1 month ago</span></span><b>107K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
       <a class="yt-card" href="https://www.youtube.com/watch?v=7gBrg7xnixU" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=7gBrg7xnixU')">
         <div class="yt-thumb"><span class="yt-date">NEW</span><img src="https://img.youtube.com/vi/7gBrg7xnixU/hqdefault.jpg" alt="Rosita"></div>
         <div class="yt-info"><h3>Rosita (Video Oficial) | LOS REYES CON LOS REYES</h3>
-          <div class="yt-meta"><span><span class="lang-es">Hace 3 meses</span><span class="lang-en">3 months ago</span></span><b>25K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+          <div class="yt-meta"><span><span class="lang-es">Hace 1 mes</span><span class="lang-en">1 month ago</span></span><b>20K <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
     </div><!-- LATEST:END -->
 
@@ -603,40 +614,40 @@
     </div>
     <!-- TOP10:START --><div class="yt-grid top6-grid">
 
-      <a class="yt-card" href="https://www.youtube.com/watch?v=uMxleHzPk38" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=uMxleHzPk38')">
-        <div class="yt-thumb"><span class="yt-rank">#1</span><img src="https://img.youtube.com/vi/uMxleHzPk38/hqdefault.jpg" alt="Juntémonos Otra Vez"></div>
-        <div class="yt-info"><h3>JUNTÉMONOS OTRA VEZ (ft. Bayriton) [Oficial Music Video]</h3>
-          <div class="yt-meta"><span><span class="lang-es">5 años</span><span class="lang-en">5 years</span></span><b>20M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+      <a class="yt-card" href="https://www.youtube.com/watch?v=9lkEDP_I8fM" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=9lkEDP_I8fM')">
+        <div class="yt-thumb"><span class="yt-rank">#1</span><img src="https://img.youtube.com/vi/9lkEDP_I8fM/hqdefault.jpg" alt="Juntemonos Otra Vez (Remix)"></div>
+        <div class="yt-info"><h3>Juntemonos Otra Vez (Remix) ft. Balbi El Chamako, Bayriton, Gabo, Dainesitta</h3>
+          <div class="yt-meta"><span><span class="lang-es">3 años</span><span class="lang-en">3 years</span></span><b>19M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
 
-      <a class="yt-card" href="https://www.youtube.com/watch?v=9lkEDP_I8fM" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=9lkEDP_I8fM')">
-        <div class="yt-thumb"><span class="yt-rank">#2</span><img src="https://img.youtube.com/vi/9lkEDP_I8fM/hqdefault.jpg" alt="Juntémonos Otra Vez Remix"></div>
-        <div class="yt-info"><h3>Juntemonos Otra Vez (Remix) ft. Balbi El Chamako, Bayriton, Gabo, Dainesitta</h3>
-          <div class="yt-meta"><span><span class="lang-es">4 años</span><span class="lang-en">4 years</span></span><b>19M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+      <a class="yt-card" href="https://www.youtube.com/watch?v=uMxleHzPk38" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=uMxleHzPk38')">
+        <div class="yt-thumb"><span class="yt-rank">#2</span><img src="https://img.youtube.com/vi/uMxleHzPk38/hqdefault.jpg" alt="Juntémonos Otra Vez"></div>
+        <div class="yt-info"><h3>Juntémonos Otra Vez (ft. Bayriton) [Oficial Music Video]</h3>
+          <div class="yt-meta"><span><span class="lang-es">4 años</span><span class="lang-en">4 years</span></span><b>18M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
 
       <a class="yt-card" href="https://www.youtube.com/watch?v=5-rlE1KiBH0" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=5-rlE1KiBH0')">
         <div class="yt-thumb"><span class="yt-rank">#3</span><img src="https://img.youtube.com/vi/5-rlE1KiBH0/hqdefault.jpg" alt="Siempre Que Llegamos Rmx"></div>
-        <div class="yt-info"><h3>Siempre Que Llegamos (Rmx) ft. JairoVera, Bai, Bayriton, Simon, Drakomafia, KingSavagge y mas</h3>
+        <div class="yt-info"><h3>Siempre Que Llegamos (Rmx) ft. Jairo Vera, Bai, Bayriton, Simon, Drakomafia y más</h3>
           <div class="yt-meta"><span><span class="lang-es">4 años</span><span class="lang-en">4 years</span></span><b>14M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
 
       <a class="yt-card" href="https://www.youtube.com/watch?v=nbvN6x2Sp-g" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=nbvN6x2Sp-g')">
         <div class="yt-thumb"><span class="yt-rank">#4</span><img src="https://img.youtube.com/vi/nbvN6x2Sp-g/hqdefault.jpg" alt="En La Calle Haciendo Plata Rmx"></div>
-        <div class="yt-info"><h3>En La Calle Haciendo Plata (Rmx) ft. JulianoSosa, Marcianeke, IthanNY, BAI, Drako, JulianoChief</h3>
-          <div class="yt-meta"><span><span class="lang-es">3 años</span><span class="lang-en">3 years</span></span><b>9.2M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+        <div class="yt-info"><h3>En La Calle Haciendo Plata (Rmx) ft. Juliano Sosa, Marcianeke, IthanNY, Bai, Drako</h3>
+          <div class="yt-meta"><span><span class="lang-es">3 años</span><span class="lang-en">3 years</span></span><b>9.1M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
 
       <a class="yt-card" href="https://www.youtube.com/watch?v=kvt0_2u4p4c" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=kvt0_2u4p4c')">
         <div class="yt-thumb"><span class="yt-rank">#5</span><img src="https://img.youtube.com/vi/kvt0_2u4p4c/hqdefault.jpg" alt="Hasta que Choke"></div>
-        <div class="yt-info"><h3>Z Jocker, Galee Galee, Juliano Chieff - Hasta que Choke (Video Oficial) [Prod by. Dakos]</h3>
-          <div class="yt-meta"><span><span class="lang-es">3 años</span><span class="lang-en">3 years</span></span><b>9.1M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+        <div class="yt-info"><h3>Hasta que Choke ft. Galee Galee, Juliano Chieff</h3>
+          <div class="yt-meta"><span><span class="lang-es">3 años</span><span class="lang-en">3 years</span></span><b>9M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
 
       <a class="yt-card" href="https://www.youtube.com/watch?v=JQ3L0Jjkapo" target="_blank" rel="noopener" onclick="return openYouTube(event,'https://www.youtube.com/watch?v=JQ3L0Jjkapo')">
         <div class="yt-thumb"><span class="yt-rank">#6</span><img src="https://img.youtube.com/vi/JQ3L0Jjkapo/hqdefault.jpg" alt="Tambores Multicolores"></div>
-        <div class="yt-info"><h3>Z Jocker, ITHANNY - Tambores Multicolores (Video Oficial) [Prod by. Dakos]</h3>
-          <div class="yt-meta"><span><span class="lang-es">4 años</span><span class="lang-en">4 years</span></span><b>8.8M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
+        <div class="yt-info"><h3>Tambores Multicolores ft. Ithanny</h3>
+          <div class="yt-meta"><span><span class="lang-es">3 años</span><span class="lang-en">3 years</span></span><b>8.5M <span class="lang-es">vistas</span><span class="lang-en">views</span></b></div></div>
       </a>
 
     </div><!-- TOP10:END -->
@@ -701,17 +712,29 @@
 
     <div class="shows-panel" id="panel-past">
       <div class="show-card">
-        <div class="show-date"><strong>--</strong><span class="lang-es">MES</span><span class="lang-en">MO</span></div>
+        <div class="show-date"><strong>11</strong><span class="lang-es">OCT</span><span class="lang-en">OCT</span></div>
         <div class="show-info">
-          <h3 class="lang-es">[Nombre del evento / ciudad] — Ejemplo</h3>
-          <h3 class="lang-en">[Event name / city] — Example</h3>
-          <p class="lang-es">Venue, Ciudad, País</p>
-          <p class="lang-en">Venue, City, Country</p>
+          <h3 class="lang-es">LOLYTA FEST 2026 — Artista invitado</h3>
+          <h3 class="lang-en">LOLYTA FEST 2026 — Guest artist</h3>
+          <p class="lang-es">Arena Hipódromo, Santiago, Chile</p>
+          <p class="lang-en">Arena Hipódromo, Santiago, Chile</p>
         </div>
         <div class="show-badge badge-past">
           <span class="lang-es">Realizado</span><span class="lang-en">Completed</span>
         </div>
       </div>
+      <details class="show-gallery">
+        <summary><span class="lang-es">Ver galería del show (6 fotos)</span><span class="lang-en">View show gallery (6 photos)</span></summary>
+        <div class="gallery-grid">
+          <a href="shows-imgs/lolyta-fest-2026/poster.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/poster.jpg" alt="LOLYTA FEST 2026 — Z Jocker" loading="lazy"></a>
+          <a href="shows-imgs/lolyta-fest-2026/01.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/01.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+          <a href="shows-imgs/lolyta-fest-2026/02.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/02.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+          <a href="shows-imgs/lolyta-fest-2026/03.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/03.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+          <a href="shows-imgs/lolyta-fest-2026/04.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/04.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+          <a href="shows-imgs/lolyta-fest-2026/05.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/05.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+        </div>
+      </details>
+
       <div class="show-card">
         <div class="show-date"><strong>--</strong><span class="lang-es">MES</span><span class="lang-en">MO</span></div>
         <div class="show-info">
