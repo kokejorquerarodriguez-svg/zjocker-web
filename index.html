@@ -377,6 +377,13 @@
   .gallery-grid a{display:block;aspect-ratio:9/16;overflow:hidden;border-radius:8px;background:#111;}
   .gallery-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
   .gallery-grid a:hover img{transform:scale(1.05);}
+
+  /* Shows: always-visible lists */
+  .shows-list{max-width:820px;margin:0 auto 44px;}
+  .shows-sub{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:2px;color:#fff;margin:0 0 16px;}
+  .shows-sub.lang-en{}
+  .shows-empty{font-size:14px;color:var(--text-dim);padding:18px 0 8px;}
+  .show-gallery{max-width:820px;margin:-8px auto 28px;}
 </style>
 </head>
 <body>
@@ -669,48 +676,9 @@
       <p class="lang-en">These are Z Jocker's only official dates. If a show isn't listed here, it isn't backed by the team.</p>
     </div>
 
-    <p class="shows-note">
-      <span class="lang-es">⚠ Fechas de ejemplo — reemplazar por el calendario real de shows antes de publicar el sitio.</span>
-      <span class="lang-en">⚠ Example dates — replace with the real show calendar before publishing the site.</span>
-    </p>
-
-    <div class="shows-tabs">
-      <button class="shows-tab active" data-panel="upcoming">
-        <span class="lang-es">Próximos</span><span class="lang-en">Upcoming</span>
-      </button>
-      <button class="shows-tab" data-panel="past">
-        <span class="lang-es">Pasados</span><span class="lang-en">Past</span>
-      </button>
-    </div>
-
-    <div class="shows-panel active" id="panel-upcoming">
-      <div class="show-card">
-        <div class="show-date"><strong>--</strong><span class="lang-es">MES</span><span class="lang-en">MO</span></div>
-        <div class="show-info">
-          <h3 class="lang-es">[Nombre del evento / ciudad] — Ejemplo</h3>
-          <h3 class="lang-en">[Event name / city] — Example</h3>
-          <p class="lang-es">Venue por confirmar, Ciudad, País</p>
-          <p class="lang-en">Venue TBD, City, Country</p>
-        </div>
-        <div class="show-badge badge-official">
-          <span class="lang-es">✓ Oficial</span><span class="lang-en">✓ Official</span>
-        </div>
-      </div>
-      <div class="show-card">
-        <div class="show-date"><strong>--</strong><span class="lang-es">MES</span><span class="lang-en">MO</span></div>
-        <div class="show-info">
-          <h3 class="lang-es">[Nombre del evento / ciudad] — Ejemplo</h3>
-          <h3 class="lang-en">[Event name / city] — Example</h3>
-          <p class="lang-es">Venue por confirmar, Ciudad, País</p>
-          <p class="lang-en">Venue TBD, City, Country</p>
-        </div>
-        <div class="show-badge badge-soldout">
-          <span class="lang-es">Entradas pronto</span><span class="lang-en">Tickets soon</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="shows-panel" id="panel-past">
+    
+    <h3 class="shows-sub"><span class="lang-es">Eventos pasados</span><span class="lang-en">Past events</span></h3>
+    <div class="shows-list">
       <div class="show-card">
         <div class="show-date"><strong>11</strong><span class="lang-es">OCT</span><span class="lang-en">OCT</span></div>
         <div class="show-info">
@@ -723,28 +691,14 @@
           <span class="lang-es">Realizado</span><span class="lang-en">Completed</span>
         </div>
       </div>
-      <details class="show-gallery">
-        <summary><span class="lang-es">Ver galería del show (6 fotos)</span><span class="lang-en">View show gallery (6 photos)</span></summary>
+      <div class="show-gallery">
         <div class="gallery-grid">
-          <a href="shows-imgs/lolyta-fest-2026/poster.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/poster.jpg" alt="LOLYTA FEST 2026 — Z Jocker" loading="lazy"></a>
-          <a href="shows-imgs/lolyta-fest-2026/01.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/01.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
-          <a href="shows-imgs/lolyta-fest-2026/02.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/02.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
-          <a href="shows-imgs/lolyta-fest-2026/03.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/03.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
-          <a href="shows-imgs/lolyta-fest-2026/04.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/04.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
-          <a href="shows-imgs/lolyta-fest-2026/05.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/05.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
-        </div>
-      </details>
-
-      <div class="show-card">
-        <div class="show-date"><strong>--</strong><span class="lang-es">MES</span><span class="lang-en">MO</span></div>
-        <div class="show-info">
-          <h3 class="lang-es">[Nombre del evento / ciudad] — Ejemplo</h3>
-          <h3 class="lang-en">[Event name / city] — Example</h3>
-          <p class="lang-es">Venue, Ciudad, País</p>
-          <p class="lang-en">Venue, City, Country</p>
-        </div>
-        <div class="show-badge badge-past">
-          <span class="lang-es">Realizado</span><span class="lang-en">Completed</span>
+<a href="shows-imgs/lolyta-fest-2026/poster.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/poster.jpg" alt="LOLYTA FEST 2026 — Z Jocker" loading="lazy"></a>
+<a href="shows-imgs/lolyta-fest-2026/01.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/01.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+<a href="shows-imgs/lolyta-fest-2026/02.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/02.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+<a href="shows-imgs/lolyta-fest-2026/03.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/03.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+<a href="shows-imgs/lolyta-fest-2026/04.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/04.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
+<a href="shows-imgs/lolyta-fest-2026/05.jpg" target="_blank" rel="noopener"><img src="shows-imgs/lolyta-fest-2026/05.jpg" alt="Z Jocker en LOLYTA FEST 2026" loading="lazy"></a>
         </div>
       </div>
     </div>
